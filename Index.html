@@ -21,30 +21,29 @@
       --fundo: #f1f5f9;
       --texto: #0f172a;
       --cinza: #64748b;
-      --branco: #ffffff;
       --borda: #e2e8f0;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: var(--fundo);
       color: var(--texto);
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
       background: var(--azul-escuro);
       color: white;
-      padding: 17px 5%;
+      padding: 18px 6%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: bold;
     }
 
@@ -52,15 +51,10 @@
       color: #60a5fa;
     }
 
-    nav {
-      display: flex;
-      gap: 22px;
-    }
-
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 14px;
+      margin-left: 18px;
     }
 
     nav a:hover {
@@ -68,39 +62,16 @@
     }
 
     .hero {
-      min-height: 620px;
-      background:
-        radial-gradient(circle at top left, #2563eb, transparent 45%),
-        linear-gradient(135deg, #020617, #172554);
+      background: linear-gradient(135deg, #020617, #172554, #2563eb);
       color: white;
-      display: flex;
-      align-items: center;
-      padding: 70px 5%;
-    }
-
-    .hero-container {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 9px 16px;
-      border: 1px solid #60a5fa;
-      border-radius: 30px;
-      margin-bottom: 22px;
-      background: rgba(37,99,235,.2);
+      padding: 100px 6%;
+      text-align: center;
     }
 
     .hero h1 {
-      font-size: 55px;
-      line-height: 1.1;
-      margin-bottom: 20px;
+      font-size: 52px;
+      max-width: 850px;
+      margin: auto;
     }
 
     .hero h1 span {
@@ -108,77 +79,38 @@
     }
 
     .hero p {
-      font-size: 18px;
-      color: #cbd5e1;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 25px auto;
+      font-size: 19px;
+      line-height: 1.6;
+      color: #dbeafe;
     }
 
     .btn {
       display: inline-block;
-      padding: 15px 25px;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
-      font-weight: bold;
-      transition: .2s;
-      text-align: center;
-    }
-
-    .btn-primary {
       background: var(--azul);
       color: white;
+      text-decoration: none;
+      border: none;
+      padding: 15px 24px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
     }
 
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
+    .btn:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
     }
 
-    .btn-light {
-      border: 1px solid #64748b;
-      color: white;
-    }
-
-    .hero-card {
-      padding: 30px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.15);
-    }
-
-    .hero-card h2 {
-      margin-bottom: 25px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .stat {
-      padding: 20px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.08);
-    }
-
-    .stat strong {
-      display: block;
-      color: #93c5fd;
-      font-size: 26px;
+    .hero .btn {
+      background: white;
+      color: var(--azul-escuro);
     }
 
     section {
-      padding: 80px 5%;
+      padding: 75px 6%;
     }
 
     .container {
@@ -186,37 +118,31 @@
       margin: auto;
     }
 
-    .title {
+    .titulo {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
-    .title h2 {
+    .titulo h2 {
       font-size: 38px;
       margin-bottom: 12px;
     }
 
-    .title p {
+    .titulo p {
       color: var(--cinza);
-      font-size: 17px;
     }
 
-    .benefits {
+    .beneficios {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
 
     .card {
       background: white;
       padding: 25px;
-      border: 1px solid var(--borda);
       border-radius: 16px;
-    }
-
-    .card .icon {
-      font-size: 35px;
-      margin-bottom: 15px;
+      border: 1px solid var(--borda);
     }
 
     .card h3 {
@@ -226,320 +152,239 @@
     .card p {
       color: var(--cinza);
       line-height: 1.6;
-      font-size: 14px;
     }
 
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 20px;
+    .icone {
+      font-size: 36px;
+      margin-bottom: 15px;
     }
 
-    .app {
-      padding: 30px;
-      border-radius: 18px;
-      color: white;
-      min-height: 180px;
-    }
-
-    .word { background: #185abd; }
-    .excel { background: #107c41; }
-    .powerpoint { background: #d24726; }
-    .outlook { background: #0078d4; }
-
-    .app strong {
-      font-size: 48px;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    .curriculum {
+    .modulos {
       background: #eaf0f8;
     }
 
-    .modules {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .module {
+    .modulo {
       background: white;
-      border: 1px solid var(--borda);
+      margin-bottom: 15px;
       border-radius: 12px;
-      margin-bottom: 14px;
+      border: 1px solid var(--borda);
       overflow: hidden;
     }
 
-    .module-title {
-      width: 100%;
-      border: none;
-      background: white;
+    .modulo-titulo {
       padding: 20px;
-      text-align: left;
-      cursor: pointer;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: bold;
+      background: white;
+      cursor: pointer;
       display: flex;
       justify-content: space-between;
     }
 
-    .lessons {
+    .aulas {
       display: none;
       border-top: 1px solid var(--borda);
     }
 
-    .lessons.active {
+    .aulas.ativo {
       display: block;
     }
 
-    .lesson {
+    .aula {
       padding: 14px 20px;
       border-bottom: 1px solid #f1f5f9;
       color: #475569;
     }
 
-    .lesson:last-child {
-      border: none;
-    }
-
-    .pricing {
+    .planos {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    .plan {
-      position: relative;
+    .plano {
       background: white;
-      padding: 35px;
-      border-radius: 20px;
+      padding: 32px;
+      border-radius: 18px;
       border: 1px solid var(--borda);
       text-align: center;
     }
 
-    .plan.popular {
+    .plano.destaque {
       border: 3px solid var(--azul);
       transform: scale(1.03);
     }
 
-    .popular-label {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--azul);
-      color: white;
-      padding: 7px 18px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .plan h3 {
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      font-size: 40px;
+    .preco {
+      font-size: 38px;
       font-weight: bold;
       color: var(--azul);
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
-    .plan ul {
+    .plano ul {
       list-style: none;
       text-align: left;
-      margin: 25px 0;
+      margin: 20px 0;
     }
 
-    .plan li {
+    .plano li {
       padding: 10px 0;
-      border-bottom: 1px solid #f1f5f9;
-      color: #475569;
+      border-bottom: 1px solid #eee;
     }
 
-    .student-area {
+    .area-aluno {
       background: var(--azul-escuro);
       color: white;
     }
 
-    .student-panel {
+    .painel {
       background: white;
       color: var(--texto);
       padding: 30px;
-      border-radius: 20px;
+      border-radius: 18px;
     }
 
-    .progress-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-    }
-
-    .progress {
+    .progresso {
       width: 100%;
       height: 18px;
       background: #e2e8f0;
       border-radius: 20px;
       overflow: hidden;
-      margin-bottom: 25px;
+      margin: 20px 0;
     }
 
-    #progressFill {
-      height: 100%;
+    #barraProgresso {
       width: 0%;
+      height: 100%;
       background: var(--verde);
-      transition: .3s;
+      transition: 0.3s;
     }
 
-    .student-grid {
+    .lista-aulas {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 25px;
+      gap: 10px;
+      margin-top: 20px;
     }
 
-    .lesson-list {
-      border: 1px solid var(--borda);
-      border-radius: 12px;
-      max-height: 450px;
-      overflow-y: auto;
-    }
-
-    .student-lesson {
-      padding: 14px;
-      border-bottom: 1px solid var(--borda);
-      cursor: pointer;
-    }
-
-    .student-lesson:hover {
+    .aula-aluno {
       background: #f8fafc;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 1px solid var(--borda);
     }
 
-    .student-lesson.completed {
+    .aula-aluno.concluida {
       background: #dcfce7;
     }
 
-    .player {
-      border: 1px solid var(--borda);
-      border-radius: 15px;
-      padding: 25px;
+    .materiais {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .video {
-      height: 230px;
-      border-radius: 12px;
-      background: linear-gradient(135deg,#0f172a,#334155);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-
-    .certificate {
-      max-width: 900px;
-      margin: auto;
-      padding: 55px 30px;
+    .material {
       background: white;
-      border: 8px solid var(--azul);
+      padding: 25px;
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+    }
+
+    .material h3 {
+      margin-bottom: 10px;
+    }
+
+    .material p {
+      color: var(--cinza);
+      margin-bottom: 18px;
+    }
+
+    .certificado {
+      background: white;
+      border: 7px solid var(--azul);
       border-radius: 15px;
+      padding: 50px;
       text-align: center;
+      max-width: 850px;
+      margin: auto;
     }
 
-    .certificate h2 {
+    .certificado h2 {
       font-size: 40px;
-      margin-bottom: 25px;
     }
 
-    .certificate p {
-      line-height: 1.8;
-      font-size: 18px;
-    }
-
-    #certificateName {
+    #nomeCertificado {
       font-size: 30px;
       color: var(--azul);
       font-weight: bold;
-      margin: 20px;
+      margin: 25px;
+    }
+
+    input {
+      padding: 15px;
+      width: min(500px, 100%);
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 16px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 62px;
+      height: 62px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 30px;
+      box-shadow: 0 5px 20px #0005;
+      z-index: 200;
     }
 
     footer {
       background: #020617;
       color: #cbd5e1;
+      padding: 40px;
       text-align: center;
-      padding: 45px 20px;
     }
 
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #25d366;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 27px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.25);
-    }
-
-    @media(max-width:900px) {
-      nav { display:none; }
-
-      .hero-container,
-      .student-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 850px) {
+      nav {
+        display: none;
       }
 
       .hero h1 {
-        font-size: 40px;
+        font-size: 36px;
       }
 
-      .benefits,
-      .apps {
-        grid-template-columns: repeat(2,1fr);
+      .beneficios {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .pricing {
+      .planos,
+      .materiais {
         grid-template-columns: 1fr;
       }
 
-      .plan.popular {
+      .plano.destaque {
         transform: none;
       }
     }
 
-    @media(max-width:550px) {
-      section {
-        padding: 60px 20px;
-      }
-
-      header {
-        padding: 16px 20px;
-      }
-
-      .hero {
-        padding: 60px 20px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .benefits,
-      .apps,
-      .stats {
+    @media (max-width: 500px) {
+      .beneficios {
         grid-template-columns: 1fr;
       }
 
-      .title h2 {
-        font-size: 30px;
+      section {
+        padding: 55px 20px;
       }
     }
   </style>
@@ -548,156 +393,71 @@
 <body>
 
 <header>
-  <div class="logo">Office<span>Pro</span></div>
+  <div class="logo">
+    Office<span>Pro</span>
+  </div>
 
   <nav>
     <a href="#inicio">Início</a>
     <a href="#curso">Curso</a>
-    <a href="#aulas">Aulas</a>
     <a href="#planos">Planos</a>
     <a href="#aluno">Área do Aluno</a>
+    <a href="#materiais">Materiais</a>
   </nav>
 </header>
 
+
 <section class="hero" id="inicio">
 
-  <div class="hero-container">
+  <h1>
+    Domine o <span>Pacote Office</span>
+  </h1>
 
-    <div>
+  <p>
+    Curso completo com Word, Excel, PowerPoint, Outlook,
+    Access, OneDrive e Teams.
+  </p>
 
-      <div class="badge">
-        🚀 Curso Completo • 50 Aulas
-      </div>
-
-      <h1>
-        Domine o <span>Pacote Office</span> e evolua profissionalmente.
-      </h1>
-
-      <p>
-        Aprenda Word, Excel, PowerPoint, Outlook,
-        Access, OneDrive e Teams em um curso completo.
-      </p>
-
-      <div class="buttons">
-        <a href="#planos" class="btn btn-primary">
-          🚀 Quero Começar
-        </a>
-
-        <a href="#aulas" class="btn btn-light">
-          📚 Ver as 50 Aulas
-        </a>
-      </div>
-
-    </div>
-
-    <div class="hero-card">
-
-      <h2>Você terá acesso a:</h2>
-
-      <div class="stats">
-
-        <div class="stat">
-          <strong>50</strong>
-          Aulas
-        </div>
-
-        <div class="stat">
-          <strong>9</strong>
-          Módulos
-        </div>
-
-        <div class="stat">
-          <strong>100%</strong>
-          Online
-        </div>
-
-        <div class="stat">
-          <strong>🏆</strong>
-          Certificado
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+  <a href="#planos" class="btn">
+    🚀 Começar Agora
+  </a>
 
 </section>
 
-<section id="curso">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Por que fazer este curso?</h2>
-      <p>Aprenda ferramentas importantes para estudos e trabalho.</p>
-    </div>
-
-    <div class="benefits">
-
-      <div class="card">
-        <div class="icon">📚</div>
-        <h3>Curso Completo</h3>
-        <p>Conteúdo organizado do básico ao avançado.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">💻</div>
-        <h3>100% Online</h3>
-        <p>Estude de onde quiser utilizando seus dispositivos.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📈</div>
-        <h3>Profissional</h3>
-        <p>Desenvolva habilidades úteis para diversas atividades.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏆</div>
-        <h3>Certificado</h3>
-        <p>Gere seu certificado ao finalizar seus estudos.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 <section>
 
   <div class="container">
 
-    <div class="title">
-      <h2>Principais ferramentas</h2>
-      <p>Conheça algumas das ferramentas estudadas.</p>
+    <div class="titulo">
+      <h2>Por que fazer o OfficePro?</h2>
+      <p>Desenvolva habilidades importantes para estudos e trabalho.</p>
     </div>
 
-    <div class="apps">
+    <div class="beneficios">
 
-      <div class="app word">
-        <strong>W</strong>
-        <h3>Word</h3>
-        <p>Documentos profissionais.</p>
+      <div class="card">
+        <div class="icone">📚</div>
+        <h3>50 Aulas</h3>
+        <p>Conteúdo organizado para aprender passo a passo.</p>
       </div>
 
-      <div class="app excel">
-        <strong>X</strong>
+      <div class="card">
+        <div class="icone">💻</div>
+        <h3>100% Online</h3>
+        <p>Estude de onde quiser e no seu ritmo.</p>
+      </div>
+
+      <div class="card">
+        <div class="icone">📊</div>
         <h3>Excel</h3>
-        <p>Planilhas e fórmulas.</p>
+        <p>Do básico ao avançado.</p>
       </div>
 
-      <div class="app powerpoint">
-        <strong>P</strong>
-        <h3>PowerPoint</h3>
-        <p>Apresentações.</p>
-      </div>
-
-      <div class="app outlook">
-        <strong>O</strong>
-        <h3>Outlook</h3>
-        <p>E-mails e calendário.</p>
+      <div class="card">
+        <div class="icone">🏆</div>
+        <h3>Certificado</h3>
+        <p>Certificado ao concluir o curso.</p>
       </div>
 
     </div>
@@ -706,72 +466,65 @@
 
 </section>
 
-<section class="curriculum" id="aulas">
+
+<section class="modulos" id="curso">
 
   <div class="container">
 
-    <div class="title">
-      <h2>📚 As 50 aulas</h2>
-      <p>Confira o conteúdo completo do curso.</p>
+    <div class="titulo">
+      <h2>📚 Curso com 9 Módulos</h2>
+      <p>Clique para visualizar as aulas.</p>
     </div>
 
-    <div class="modules" id="modules"></div>
+    <div id="listaModulos"></div>
 
   </div>
 
 </section>
+
 
 <section id="planos">
 
   <div class="container">
 
-    <div class="title">
-      <h2>Escolha seu plano</h2>
-      <p>Escolha a opção ideal para você.</p>
+    <div class="titulo">
+      <h2>Escolha seu Plano</h2>
+      <p>Pagamento integrado diretamente pelo Mercado Pago.</p>
     </div>
 
-    <div class="pricing">
+    <div class="planos">
 
-      <!-- BÁSICO -->
+      <div class="plano">
 
-      <div class="plan">
+        <h2>🥉 Básico</h2>
 
-        <h3>🥉 Básico</h3>
-
-        <div class="price">
+        <div class="preco">
           R$ 29,90
         </div>
 
         <ul>
           <li>✓ Acesso ao curso</li>
           <li>✓ 50 aulas</li>
-          <li>✓ Word</li>
+          <li>✓ Microsoft Word</li>
           <li>✓ Excel Básico</li>
         </ul>
 
         <a
           href="https://mpago.la/2N7hs3e"
           target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-          style="width:100%"
+          class="btn"
         >
           🛒 Comprar Agora
         </a>
 
       </div>
 
-      <!-- PROFISSIONAL -->
 
-      <div class="plan popular">
+      <div class="plano destaque">
 
-        <div class="popular-label">
-          MAIS POPULAR
-        </div>
+        <h2>🥈 Profissional</h2>
 
-        <h3>🥈 Profissional</h3>
-
-        <div class="price">
+        <div class="preco">
           R$ 59,90
         </div>
 
@@ -786,39 +539,34 @@
         <a
           href="https://mpago.la/22NrBPt"
           target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-          style="width:100%"
+          class="btn"
         >
           🚀 Comprar Agora
         </a>
 
       </div>
 
-      <!-- PREMIUM -->
 
-      <div class="plan">
+      <div class="plano">
 
-        <h3>🥇 Premium</h3>
+        <h2>🥇 Premium</h2>
 
-        <div class="price">
+        <div class="preco">
           R$ 97,90
         </div>
 
         <ul>
           <li>✓ Curso Completo</li>
-          <li>✓ Todos os módulos</li>
+          <li>✓ 9 módulos</li>
           <li>✓ 50 aulas</li>
-          <li>✓ Materiais extras</li>
+          <li>✓ 9 apostilas PDF</li>
           <li>✓ Certificado</li>
         </ul>
 
         <a
           href="https://mpago.la/2e8VCsH"
           target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-          style="width:100%"
+          class="btn"
         >
           👑 Comprar Agora
         </a>
@@ -831,61 +579,29 @@
 
 </section>
 
-<section class="student-area" id="aluno">
+
+<section class="area-aluno" id="aluno">
 
   <div class="container">
 
-    <div class="title">
+    <div class="titulo">
       <h2>🎓 Área do Aluno</h2>
-      <p>Acompanhe seu progresso no curso.</p>
+      <p>Controle o seu progresso no curso.</p>
     </div>
 
-    <div class="student-panel">
+    <div class="painel">
 
-      <div class="progress-info">
-        <div>
-          <h3>Seu progresso</h3>
-          <p id="progressText">0 de 50 aulas concluídas</p>
-        </div>
+      <h3>Seu progresso</h3>
 
-        <strong id="progressPercent">0%</strong>
+      <p id="textoProgresso">
+        0 de 50 aulas concluídas
+      </p>
+
+      <div class="progresso">
+        <div id="barraProgresso"></div>
       </div>
 
-      <div class="progress">
-        <div id="progressFill"></div>
-      </div>
-
-      <div class="student-grid">
-
-        <div class="lesson-list" id="studentLessons"></div>
-
-        <div class="player">
-
-          <div class="video">
-            ▶ Aula do Curso
-          </div>
-
-          <h2 id="lessonTitle">
-            Selecione uma aula
-          </h2>
-
-          <p
-            id="lessonDescription"
-            style="margin:15px 0;color:#64748b;line-height:1.6"
-          >
-            Escolha uma aula para começar.
-          </p>
-
-          <button
-            class="btn btn-primary"
-            onclick="completeLesson()"
-          >
-            ✓ Marcar como concluída
-          </button>
-
-        </div>
-
-      </div>
+      <div class="lista-aulas" id="listaAulasAluno"></div>
 
     </div>
 
@@ -893,56 +609,68 @@
 
 </section>
 
+
+<section id="materiais">
+
+  <div class="container">
+
+    <div class="titulo">
+      <h2>📄 Materiais em PDF</h2>
+      <p>9 apostilas organizadas por módulo.</p>
+    </div>
+
+    <div class="materiais" id="listaMateriais"></div>
+
+  </div>
+
+</section>
+
+
 <section>
 
   <div class="container">
 
-    <div class="title">
+    <div class="titulo">
       <h2>🏆 Certificado</h2>
-      <p>Personalize seu certificado de conclusão.</p>
+      <p>Digite seu nome para personalizar.</p>
     </div>
 
-    <div style="text-align:center;margin-bottom:25px">
+    <div style="text-align:center; margin-bottom:30px;">
 
       <input
-        id="nameInput"
-        type="text"
+        id="inputNome"
         placeholder="Digite seu nome completo"
-        style="
-          width:100%;
-          max-width:500px;
-          padding:15px;
-          border-radius:10px;
-          border:1px solid #ddd;
-          font-size:16px
-        "
       >
 
       <br><br>
 
       <button
-        class="btn btn-primary"
-        onclick="generateCertificate()"
+        class="btn"
+        onclick="gerarCertificado()"
       >
         Gerar Certificado
       </button>
 
     </div>
 
-    <div class="certificate">
+
+    <div class="certificado">
 
       <h2>CERTIFICADO</h2>
 
-      <p>Certificamos que</p>
+      <p>
+        Certificamos que
+      </p>
 
-      <div id="certificateName">
+      <div id="nomeCertificado">
         Seu Nome
       </div>
 
       <p>
         concluiu o
-        <strong>Curso Completo de Pacote Office Profissional</strong>,
-        composto por 50 aulas.
+        <strong>
+          Curso Completo de Pacote Office
+        </strong>
       </p>
 
       <br>
@@ -957,6 +685,18 @@
 
 </section>
 
+
+<a
+  class="whatsapp"
+  href="https://wa.me/5561993730064"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Falar no WhatsApp"
+>
+  💬
+</a>
+
+
 <footer>
 
   <h2>OfficePro</h2>
@@ -964,7 +704,7 @@
   <br>
 
   <p>
-    Curso Completo de Pacote Office.
+    Curso Completo de Pacote Office
   </p>
 
   <br>
@@ -975,318 +715,340 @@
 
 </footer>
 
-<!-- TROQUE O NÚMERO PELO SEU WHATSAPP -->
-
-<a
-  class="whatsapp"
-  href="https://wa.me/5500000000000"
-  target="_blank"
-  title="WhatsApp"
->
-  ☎
-</a>
 
 <script>
 
-const courseModules = [
+const modulos = [
 
-{
-name: "Módulo 1 — Introdução ao Pacote Office",
-lessons: [
-"1. Conhecendo as ferramentas",
-"2. Instalando e acessando o Office",
-"3. Criando uma conta Microsoft"
-]
-},
+  {
+    nome: "Módulo 1 — Introdução ao Pacote Office",
+    aulas: [
+      "Aula 1 — Conhecendo as ferramentas",
+      "Aula 2 — Instalando e acessando o Office",
+      "Aula 3 — Conta Microsoft"
+    ]
+  },
 
-{
-name: "Módulo 2 — Microsoft Word",
-lessons: [
-"4. Conhecendo a interface",
-"5. Criando documentos",
-"6. Formatação de textos",
-"7. Fontes e parágrafos",
-"8. Inserindo imagens e tabelas",
-"9. Cabeçalho e rodapé",
-"10. Criando currículos profissionais",
-"11. Salvando em PDF"
-]
-},
+  {
+    nome: "Módulo 2 — Microsoft Word",
+    aulas: [
+      "Aula 4 — Interface do Word",
+      "Aula 5 — Criando documentos",
+      "Aula 6 — Formatação de textos",
+      "Aula 7 — Fontes e parágrafos",
+      "Aula 8 — Imagens e tabelas",
+      "Aula 9 — Cabeçalho e rodapé",
+      "Aula 10 — Currículo profissional",
+      "Aula 11 — Exportando PDF"
+    ]
+  },
 
-{
-name: "Módulo 3 — Excel Básico",
-lessons: [
-"12. Interface do Excel",
-"13. Planilhas e células",
-"14. Fórmulas básicas",
-"15. SOMA",
-"16. MÉDIA",
-"17. MÁXIMO e MÍNIMO",
-"18. Formatação de planilhas"
-]
-},
+  {
+    nome: "Módulo 3 — Excel Básico",
+    aulas: [
+      "Aula 12 — Interface do Excel",
+      "Aula 13 — Planilhas e células",
+      "Aula 14 — Fórmulas básicas",
+      "Aula 15 — Função SOMA",
+      "Aula 16 — Função MÉDIA",
+      "Aula 17 — MÁXIMO e MÍNIMO",
+      "Aula 18 — Formatação"
+    ]
+  },
 
-{
-name: "Módulo 4 — Excel Intermediário",
-lessons: [
-"19. Função SE",
-"20. CONT.SE",
-"21. SOMASE",
-"22. PROCV e PROCX",
-"23. Filtros",
-"24. Tabelas",
-"25. Gráficos"
-]
-},
+  {
+    nome: "Módulo 4 — Excel Intermediário",
+    aulas: [
+      "Aula 19 — Função SE",
+      "Aula 20 — CONT.SE",
+      "Aula 21 — SOMASE",
+      "Aula 22 — PROCV e PROCX",
+      "Aula 23 — Filtros",
+      "Aula 24 — Tabelas",
+      "Aula 25 — Gráficos"
+    ]
+  },
 
-{
-name: "Módulo 5 — Excel Avançado",
-lessons: [
-"26. Tabelas dinâmicas",
-"27. Dashboards",
-"28. Análise de dados",
-"29. Funções avançadas",
-"30. Automação e produtividade"
-]
-},
+  {
+    nome: "Módulo 5 — Excel Avançado",
+    aulas: [
+      "Aula 26 — Tabelas dinâmicas",
+      "Aula 27 — Dashboards",
+      "Aula 28 — Análise de dados",
+      "Aula 29 — Funções avançadas",
+      "Aula 30 — Produtividade"
+    ]
+  },
 
-{
-name: "Módulo 6 — PowerPoint",
-lessons: [
-"31. Criando apresentações",
-"32. Design de slides",
-"33. Inserindo imagens",
-"34. Animações",
-"35. Transições",
-"36. Criando apresentações profissionais",
-"37. Exportando apresentações"
-]
-},
+  {
+    nome: "Módulo 6 — PowerPoint",
+    aulas: [
+      "Aula 31 — Criando apresentações",
+      "Aula 32 — Design de slides",
+      "Aula 33 — Inserindo imagens",
+      "Aula 34 — Animações",
+      "Aula 35 — Transições",
+      "Aula 36 — Apresentações profissionais",
+      "Aula 37 — Exportação"
+    ]
+  },
 
-{
-name: "Módulo 7 — Outlook",
-lessons: [
-"38. Configurando e-mail",
-"39. Enviando mensagens",
-"40. Organização da caixa de entrada",
-"41. Calendário",
-"42. Reuniões e tarefas"
-]
-},
+  {
+    nome: "Módulo 7 — Outlook",
+    aulas: [
+      "Aula 38 — Configuração",
+      "Aula 39 — Enviando e-mails",
+      "Aula 40 — Organização",
+      "Aula 41 — Calendário",
+      "Aula 42 — Reuniões"
+    ]
+  },
 
-{
-name: "Módulo 8 — Access",
-lessons: [
-"43. Introdução aos bancos de dados",
-"44. Criando tabelas",
-"45. Formulários",
-"46. Consultas",
-"47. Relatórios"
-]
-},
+  {
+    nome: "Módulo 8 — Access",
+    aulas: [
+      "Aula 43 — Banco de dados",
+      "Aula 44 — Criando tabelas",
+      "Aula 45 — Formulários",
+      "Aula 46 — Consultas",
+      "Aula 47 — Relatórios"
+    ]
+  },
 
-{
-name: "Módulo 9 — OneDrive e Teams",
-lessons: [
-"48. Armazenamento na nuvem",
-"49. Compartilhamento de arquivos",
-"50. Comunicação e trabalho em equipe"
-]
-}
+  {
+    nome: "Módulo 9 — OneDrive e Teams",
+    aulas: [
+      "Aula 48 — Armazenamento na nuvem",
+      "Aula 49 — Compartilhamento",
+      "Aula 50 — Trabalho em equipe"
+    ]
+  }
 
 ];
 
-let allLessons = [];
 
-courseModules.forEach(module => {
-  module.lessons.forEach(lesson => {
-    allLessons.push(lesson);
-  });
-});
+const listaModulos =
+  document.getElementById("listaModulos");
 
-function renderModules() {
 
-  const container =
-    document.getElementById("modules");
+modulos.forEach((modulo, index) => {
 
-  courseModules.forEach((module, index) => {
+  const aulasHTML =
+    modulo.aulas
+      .map(aula =>
+        `<div class="aula">▶ ${aula}</div>`
+      )
+      .join("");
 
-    const moduleElement =
-      document.createElement("div");
+  listaModulos.innerHTML += `
 
-    moduleElement.className = "module";
+    <div class="modulo">
 
-    let lessonsHTML = "";
-
-    module.lessons.forEach(lesson => {
-      lessonsHTML += `
-        <div class="lesson">
-          ▶ ${lesson}
-        </div>
-      `;
-    });
-
-    moduleElement.innerHTML = `
-
-      <button
-        class="module-title"
-        onclick="toggleModule(${index})"
+      <div
+        class="modulo-titulo"
+        onclick="abrirModulo(${index})"
       >
 
-        <span>${module.name}</span>
+        <span>${modulo.nome}</span>
 
         <span>▼</span>
 
-      </button>
-
-      <div
-        class="lessons"
-        id="module-${index}"
-      >
-        ${lessonsHTML}
       </div>
 
-    `;
+      <div
+        class="aulas"
+        id="modulo-${index}"
+      >
 
-    container.appendChild(moduleElement);
+        ${aulasHTML}
 
-  });
+      </div>
 
-}
+    </div>
 
-function toggleModule(index) {
+  `;
+
+});
+
+
+function abrirModulo(index) {
 
   document
-    .getElementById("module-" + index)
-    .classList.toggle("active");
+    .getElementById(`modulo-${index}`)
+    .classList
+    .toggle("ativo");
 
 }
 
-let completed =
-  JSON.parse(localStorage.getItem("officepro-progress")) || [];
 
-let currentLesson = null;
+const todasAulas =
+  modulos.flatMap(
+    modulo => modulo.aulas
+  );
 
-function renderStudentLessons() {
 
-  const container =
-    document.getElementById("studentLessons");
+let concluidas =
+  JSON.parse(
+    localStorage.getItem("officeproProgresso")
+  ) || [];
 
-  container.innerHTML = "";
 
-  allLessons.forEach((lesson, index) => {
+function renderizarAulas() {
 
-    const item =
-      document.createElement("div");
-
-    item.className =
-      "student-lesson" +
-      (completed.includes(index) ? " completed" : "");
-
-    item.innerHTML = `
-      ${completed.includes(index) ? "✅" : "▶"}
-      ${lesson}
-    `;
-
-    item.onclick =
-      () => selectLesson(index);
-
-    container.appendChild(item);
-
-  });
-
-  updateProgress();
-
-}
-
-function selectLesson(index) {
-
-  currentLesson = index;
-
-  document.getElementById(
-    "lessonTitle"
-  ).textContent =
-    allLessons[index];
-
-  document.getElementById(
-    "lessonDescription"
-  ).textContent =
-    "Você selecionou a aula " +
-    (index + 1) +
-    " do Curso Completo de Pacote Office.";
-
-}
-
-function completeLesson() {
-
-  if (currentLesson === null) {
-
-    alert("Selecione uma aula primeiro.");
-
-    return;
-
-  }
-
-  if (!completed.includes(currentLesson)) {
-
-    completed.push(currentLesson);
-
-    localStorage.setItem(
-      "officepro-progress",
-      JSON.stringify(completed)
+  const lista =
+    document.getElementById(
+      "listaAulasAluno"
     );
 
-    renderStudentLessons();
 
-    alert("Aula concluída com sucesso! 🎉");
+  lista.innerHTML =
+    todasAulas
+      .map((aula, index) => `
+
+        <div
+          class="aula-aluno ${
+            concluidas.includes(index)
+              ? "concluida"
+              : ""
+          }"
+
+          onclick="concluirAula(${index})"
+        >
+
+          ${
+            concluidas.includes(index)
+              ? "✅"
+              : "▶"
+          }
+
+          ${aula}
+
+        </div>
+
+      `)
+      .join("");
+
+
+  const porcentagem =
+    Math.round(
+      concluidas.length /
+      todasAulas.length *
+      100
+    );
+
+
+  document
+    .getElementById("barraProgresso")
+    .style
+    .width =
+    porcentagem + "%";
+
+
+  document
+    .getElementById("textoProgresso")
+    .textContent =
+    `${concluidas.length} de ${todasAulas.length} aulas concluídas`;
+
+}
+
+
+function concluirAula(index) {
+
+  if (!concluidas.includes(index)) {
+
+    concluidas.push(index);
 
   } else {
 
-    alert("Esta aula já foi concluída.");
+    concluidas =
+      concluidas.filter(
+        aula => aula !== index
+      );
 
   }
 
-}
 
-function updateProgress() {
+  localStorage.setItem(
+    "officeproProgresso",
+    JSON.stringify(concluidas)
+  );
 
-  const total =
-    allLessons.length;
 
-  const percent =
-    Math.round(
-      (completed.length / total) * 100
-    );
-
-  document.getElementById(
-    "progressText"
-  ).textContent =
-    completed.length +
-    " de " +
-    total +
-    " aulas concluídas";
-
-  document.getElementById(
-    "progressPercent"
-  ).textContent =
-    percent + "%";
-
-  document.getElementById(
-    "progressFill"
-  ).style.width =
-    percent + "%";
+  renderizarAulas();
 
 }
 
-function generateCertificate() {
 
-  const name =
+renderizarAulas();
+
+
+const materiais = [
+
+  "Introdução ao Pacote Office",
+  "Microsoft Word",
+  "Excel Básico",
+  "Excel Intermediário",
+  "Excel Avançado",
+  "PowerPoint",
+  "Outlook",
+  "Access",
+  "OneDrive e Teams"
+
+];
+
+
+const listaMateriais =
+  document.getElementById(
+    "listaMateriais"
+  );
+
+
+materiais.forEach((material, index) => {
+
+  const numero =
+    String(index + 1)
+      .padStart(2, "0");
+
+
+  listaMateriais.innerHTML += `
+
+    <div class="material">
+
+      <h3>
+        📘 Módulo ${index + 1}
+      </h3>
+
+      <p>
+        ${material}
+      </p>
+
+      <a
+        href="materiais/modulo-${numero}.pdf"
+        target="_blank"
+        class="btn"
+      >
+
+        📥 Abrir PDF
+
+      </a>
+
+    </div>
+
+  `;
+
+});
+
+
+function gerarCertificado() {
+
+  const nome =
     document
-      .getElementById("nameInput")
+      .getElementById("inputNome")
       .value
       .trim();
 
-  if (!name) {
+
+  if (!nome) {
 
     alert(
       "Digite seu nome completo."
@@ -1296,19 +1058,13 @@ function generateCertificate() {
 
   }
 
-  document.getElementById(
-    "certificateName"
-  ).textContent = name;
 
-  alert(
-    "Certificado gerado! 🏆"
-  );
+  document
+    .getElementById("nomeCertificado")
+    .textContent =
+    nome;
 
 }
-
-renderModules();
-
-renderStudentLessons();
 
 </script>
 
